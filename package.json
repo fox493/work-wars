@@ -1,0 +1,34 @@
+{
+  "name": "workwars-nft-generator",
+  "version": "1.0.0",
+  "description": "NFT Generator for Work Wars",
+  "main": "generate-nft.js",
+  "scripts": {
+    "generate": "node generate-nft.js",
+    "upload": "node upload-to-pinata.js",
+    "upload:fast": "node upload-to-pinata.js --concurrency=10",
+    "upload:force": "node upload-to-pinata.js --force",
+    "update-metadata": "node update-metadata-images.js",
+    "upload-metadata": "node upload-metadata.js",
+    "upload-metadata:fast": "node upload-metadata.js --concurrency=10",
+    "upload-metadata:force": "node upload-metadata.js --force",
+    "remove-json-ext": "node remove-json-extension.js"
+  },
+  "dependencies": {
+    "@pinata/sdk": "^2.1.0",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.3.0",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^8.1.0",
+    "ipfs-http-client": "^56.0.3",
+    "pinata": "^2.1.3",
+    "pinata-web3": "^0.5.4",
+    "sharp": "^0.33.0",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true
+}
